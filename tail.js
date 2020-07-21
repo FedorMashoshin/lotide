@@ -9,8 +9,8 @@ const assertEqual = function(actual, expected) {
 };
 
 const tail = function(arr) {
-  delete arr[0];
-  return arr;
+  let newArr = arr.slice(0);
+  return newArr;
 };
 
 const words = ["Yo Yo", "Lighthouse", "Labs"];
