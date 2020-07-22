@@ -1,4 +1,3 @@
-
 function assertArraysEqual(arr1, arr2) {
 const fail = `${String.fromCodePoint(0x1F534)} Assertion Failed: [${arr1}] !== [${arr2}] ${String.fromCodePoint(0x1F534)} `;
 const pass = `${String.fromCodePoint(0x1F7E2)} Assertion Passed: [${arr1}] === [${arr2}] ${String.fromCodePoint(0x1F7E2)} `;
