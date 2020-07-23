@@ -8,10 +8,6 @@ const assertEqual = function (actual, expected) {
     }
 };
 
-// assertEqual("Lighthouse Labs", "Bootcamp");
-// assertEqual(1, 1);
-
-
 function eqArrays(arr1, arr2) {
     if (arr1.length != arr2.length) {
         return false;
@@ -23,5 +19,7 @@ function eqArrays(arr1, arr2) {
     }
     return true;
 }
+console.log(eqArrays([1, 2, 3], [1, 23, 3]))
 
-assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
+
+// assertEqual(eqArrays([1, 2, 3], [1, 2, 3]), true);
