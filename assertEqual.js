@@ -7,6 +7,3 @@ const assertEqual = function(actual, expected) {
 };
 
 module.exports = assertEqual;
-
-// assertEqual("Lighthouse Labs", "Bootcamp"); --> false 
-// assertEqual(1, 1); --> true
