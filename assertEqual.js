@@ -1,12 +1,12 @@
-const green = String.fromCodePoint(0x1F7E2);
-const red = String.fromCodePoint(0x1F534);
 const assertEqual = function(actual, expected) {
   if (actual === expected) {
-    console.log(` ${green} Assertion Passed: [${actual}] === [${expected}] ${green}`);
+    console.log(` 🟢🟢 Assertion Passed: [${actual}] === [${expected}] 🟢🟢`);
   }  else  {
-    console.log(` ${red} Assertion Failed: [${actual}] !== [${expected}] ${red}`);
+    console.log(` 🔴🔴 Assertion Failed: [${actual}] !== [${expected}] 🔴🔴`);
   }
 };
 
-assertEqual("Lighthouse Labs", "Bootcamp");
-assertEqual(1, 1);
+module.exports = assertEqual;
+
+// assertEqual("Lighthouse Labs", "Bootcamp"); --> false 
+// assertEqual(1, 1); --> true
