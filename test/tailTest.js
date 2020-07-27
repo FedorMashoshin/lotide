@@ -5,9 +5,8 @@ const result = tail(["Yo Yo", "Lighthouse", "Labs"])
 
 
 describe("#tail", () => {
-    it("returns Lighthouse and Labs for [Yo Yo, Lighthouse, Labs] ", () => {
-      assert.strictEqual(result[0], "Lighthouse");
-      assert.strictEqual(result[1], "Labs");
+    it("returns [ Yo Yo, Lighthouse, Labs] for [Hello ,Yo Yo, Lighthouse, Labs] ", () => {
+      assert.deepEqual(result, [ "Lighthouse", "Labs"]);
     });
   });
 
