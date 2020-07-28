@@ -12,21 +12,21 @@ const assertObjectsEqual = function (object1, object2) {
             if (object1[key].length != object2[key].length) {
                 return ` 🔴🔴 Assertion Failed: [${inspect(object1)}] !== [${inspect(object2)}] 🔴🔴`;
             }
-             //Comparing values of our arrays
+            //Comparing values of our arrays
             for (let i = 0; i < object1[key].length; i++) {
                 if (object1[key][i] != object2[key][i]) {
                     return ` 🔴🔴 Assertion Failed: [${inspect(object1)}] !== [${inspect(object2)}] 🔴🔴`;
                 }
             }
             // If our arrays are totally equal we pass 
-            return ` 🟢🟢 Assertion Passed: [${inspect(object1)}] !== [${inspect(object2)}] 🟢🟢` ;
+            return ` 🟢🟢 Assertion Passed: [${inspect(object1)}] !== [${inspect(object2)}] 🟢🟢`;
         }
         //If we have object --> compare values
         if (object1[key] !== object2[key]) {
             return ` 🔴🔴 Assertion Failed: [${inspect(object1)}] !== [${inspect(object2)}] 🔴🔴`;
         }
     }
-    return ` 🟢🟢 Assertion Passed: [${inspect(object1)}] !== [${inspect(object2)}] 🟢🟢` ;
+    return ` 🟢🟢 Assertion Passed: [${inspect(object1)}] !== [${inspect(object2)}] 🟢🟢`;
 }
 
 // <--------------------- TESTS ---------------------> \\
@@ -40,7 +40,7 @@ const ba = {
     a: "1"
 };
 
-console.log(assertObjectsEqual(ab, ba)); 
+console.log(assertObjectsEqual(ab, ba));
 
 const cd = {
     c: "1",
@@ -55,4 +55,4 @@ const cd2 = {
     c: "1",
     d: ["2", 3, 4]
 };
-console.log(assertObjectsEqual(cd, cd2)); 
+console.log(assertObjectsEqual(cd, cd2));
