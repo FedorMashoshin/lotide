@@ -29,6 +29,8 @@ This project was created and published by me as part of my learnings at Lighthou
 `const results = _.map(['hi','hola','privet'],  word => word[0]) // => [h, h, p]`
 `const results = _.without(['Hola', 'Privet', 'Hi'],['Hi']) // => ['Hola' , 'Privet']`
 `const results = _.findKey({'Blue Hill': { stars:1 }, 'Nova':{ stars:2},}, x => x.stars === 2) // => Nova`
+`const results = _.eqArrays([1,2,3],[1,2,3], true)// => true`
+`const results =_.eqObjects( {a: 1, b: 2}, { b: 2, a: 1}, true) // => true`
 
 ## Documentation
 
@@ -43,4 +45,6 @@ The following functions are currently implemented:
 * `function7(map)`: returning the array after map().
 * `function8(without)`: returning the array without element that we chose.
 * `function9(findKey)`: returning the key following our condition.
+* `function10(eqArrays)`: returning true or false, after comparing 2 arrays.
+* `function11(eqObjects)`: returning true or false, after comparing 2 objects.
 

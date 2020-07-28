@@ -9,7 +9,8 @@ const letterPositions = require('./letterPositions');
 const findKeyByValue = require('./findKeyByValue');
 const map = require('./map');
 const without = require('./without');
-const findKey = require('./findKey')
+const findKey = require('./findKey');
+const eqObjects = require('./eqObjects');
 
 module.exports = {
   head,
@@ -23,5 +24,6 @@ module.exports = {
   findKeyByValue,
   map,
   without,
-  findKey
+  findKey,
+  eqObjects
 };
