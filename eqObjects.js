@@ -1,7 +1,3 @@
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
-
-
 const eqObjects = function (object1, object2) {
     // If not even objects return false!
     let keys1 = Object.keys(object1);
@@ -10,7 +6,7 @@ const eqObjects = function (object1, object2) {
     }
     //If we have object --> compare values
     for (key of keys1) {
-         //If we have arrays --> compare values
+        //If we have arrays --> compare values
         if (Array.isArray(object1[key]) && Array.isArray(object2[key])) {
             return eqArrays(object1[key], object2[key])
         }
@@ -18,20 +14,20 @@ const eqObjects = function (object1, object2) {
             return false;
         }
     }
-  return true;
+    return true;
 }
 
 
 function eqArrays(arr1, arr2) {
-if (arr1.length != arr2.length) {
-    return false;
-}
-for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] != arr2[i]) {
+    if (arr1.length != arr2.length) {
         return false;
     }
-}
-return true;
+    for (let i = 0; i < arr1.length; i++) {
+        if (arr1[i] != arr2[i]) {
+            return false;
+        }
+    }
+    return true;
 }
 
 
@@ -45,9 +41,18 @@ const ba = {
 };
 console.log(eqObjects(ab, ba)); // => true
 
-const cd = { c: "1", d: ["2", 3] };
-const dc = { d: ["2", 3], c: "1" };
-console.log(eqObjects(cd, dc));    // => true
+const cd = {
+    c: "1",
+    d: ["2", 3]
+};
+const dc = {
+    d: ["2", 3],
+    c: "1"
+};
+console.log(eqObjects(cd, dc)); // => true
 
-const cd2 = { c: "1", d: ["2", 3, 4] };
-console.log(eqObjects(cd, cd2));   // => false
+const cd2 = {
+    c: "1",
+    d: ["2", 3, 4]
+};
+console.log(eqObjects(cd, cd2)); // => false
