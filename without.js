@@ -8,6 +8,4 @@ function without(arr1, arr2) {
     }
     return arr1;
 }
- module.exports = without;
-
-
+module.exports = without;

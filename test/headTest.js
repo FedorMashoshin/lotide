@@ -10,3 +10,4 @@ describe("#head", () => {
         assert.strictEqual(head(['5']), '5'); 
       });
   });
+  
